@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+} 
+    /* Styling of anchor tag in header */
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+    /* Header styling (color, display and alignment of items) */
+header {
+    background-color: #566c2b;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+    /* Header styling (home about contact us) apply style such as display */
+header ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+    /* logo like Amazon fit margin, color, font size, color etc */
+#logo  {
+    margin: 0 auto;
+    font-size: 30px;
+} 
+#logo a{
+    color: black;
+    text-decoration: none;
+}
+   /* menu items in which home (about contact us )apply padding */
+#menu li{
+    padding: 10px;
+}
+    /* Apply padding on fb, insta,twitter */
+#social-links li{
+    padding: 10px;
+} 
+
+#main{
+    display: flex;
+}
+
+aside {
+    flex: 0 0 20vw;
+    background-color: beige;
+    padding: 10px;
+}
+aside ul{
+    list-style: none;
+    padding: 0px;
+}
+aside ul a{
+    color: #566c2b;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid grey;
+}
+aside img {
+    width: 100%;
+}
+
+    /* In whole it apply padding in article i.e., on whole area*/
+article {
+    padding: 10px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product-box {
+    border: 1px solid #eee;
+    flex-basis: 32%;
+    max-width: 370px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.product-box img{
+    width: 100%;
+}
+.product-box h3{
+    margin: 5px 0 10px;
+}
+.product-box p{
+    margin: 0 0 10px;
+}
+
+  /* At the end of text, there is read more option i.e., its styling here!*/
+.call-to-action{
+    align-self: flex-start;
+    margin-top: auto;
+}
+.call-to-action a{
+    padding: 8px 13px;
+    border: 2px solid transparent;
+    color: #fff;
+    background: grey;
+    display: block;
+}
+.call-to-action a:hover{
+    color: grey;
+    background: transparent;
+    border: 2px solid grey;
+}
+    /* Footer styling  */
+footer {
+    background-color: #566c2b;
+    color: black;
+    text-align: center;
+    padding: 15px 0 ;
+    font-size: 20px;
+}
+    /* Website Responsiveness */
+
+@media screen and (max-width:850px) {
+    .service-box {
+        flex-basis: 48%;
+    
+    }
+    aside {
+        flex: 0 0 30vw;
+    }
+}
+@media screen and (max-width:600px) {
+    header{
+        flex-direction: column;
+    }
+    #logo {
+        order: -1;
+    }
+    #main{
+        flex-direction: column;
+    }
+    article {
+        order: -1;
+    }
+    .product-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        text-align: center;
+    }
+}

@@ -1,0 +1,185 @@
+/* --------------------MEDIA QUERIES-------------------- */
+
+/* Media query for screens with a max-width of 1400px */
+@media screen and (max-width: 1400px) 
+{
+    /* Adjusting profile section height and bottom margin */
+    #profile 
+    {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+  
+    /* Enabling flex-wrap for about containers */
+    .about-containers 
+    {
+      flex-wrap: wrap;
+    }
+  
+    /* Adjusting height for contact and projects sections */
+    #contact,
+    #projects 
+    {
+      height: fit-content;
+    }
+}
+  
+  /* Media query for screens with a max-width of 1200px */
+@media screen and (max-width: 1200px) 
+{
+    /* Hiding desktop navigation and showing hamburger navigation */
+    #desktop-nav 
+    {
+      display: none;
+    }
+    #hamburger-nav 
+    {
+        display: flex;
+    }
+  
+    /* Adding top margin for experience section */
+    #experience,
+    .experience-details-container 
+    {
+      margin-top: 2rem;
+    }
+  
+    /* Displaying profile and section container as block */
+    #profile,
+    .section-container 
+    {
+      display: block;
+    }
+  
+    /* Hiding arrow icon */
+    .arrow 
+    {
+      display: none;
+    }
+  
+    /* Setting height to fit-content for section and section container */
+    section,
+    .section-container 
+    {
+      height: fit-content;
+    }
+  
+    /* Adjusting section margins */
+    section 
+    {
+      margin: 0 5%;
+    }
+  
+    /* Adjusting profile picture container dimensions and margin */
+    .section__pic-container
+    {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+  
+    /* Removing top margin for about containers */
+    .about-containers
+    {
+      margin-top: 0;
+    }
+}
+  
+  /* Media query for screens with a max-width of 600px */
+@media screen and (max-width: 600px) 
+{
+    /* Adjusting height for contact section and footer */
+    #contact,
+    footer 
+    {
+      height: 40vh;
+    }
+  
+    /* Adjusting profile section height and removing bottom margin */
+    #profile
+    {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+  
+    /* Reducing font size for articles */
+    article
+    {
+      font-size: 1rem;
+    }
+  
+    /* Adjusting footer navigation height and margin */
+    footer nav 
+    {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+  
+    /* Enabling flex-wrap for about containers, contact info upper container, and button container */
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container
+    {
+      flex-wrap: wrap;
+    }
+  
+    /* Removing margin for contact info container */
+    .contact-info-container
+    {
+      margin: 0;
+    }
+  
+    /* Adjusting font size for contact info container text and navigation links */
+    .contact-info-container p,
+    .nav-links li a 
+    {
+      font-size: 1rem;
+    }
+  
+    /* Reducing font size for experience sub-title */
+    .experience-sub-title 
+    {
+      font-size: 1.25rem;
+    }
+  
+    /* Adjusting logo font size */
+    .logo 
+    {
+      font-size: 1.5rem;
+    }
+  
+    /* Displaying navigation links as a column and adjusting gap and text alignment */
+    .nav-links 
+    {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  
+    /* Adjusting profile picture container dimensions and alignment */
+    .section__pic-container 
+    {
+      width: auto;
+      height: 46vw;
+      justify-content: center;
+    }
+  
+    /* Reducing font size for profile section text */
+    .section__text__p2
+    {
+      font-size: 1.25rem;
+    }
+  
+    /* Reducing font size for section titles */
+    .title
+    {
+      font-size: 2rem;
+    }
+  
+    /* Setting text alignment to justify for text container */
+    .text-container
+    {
+      text-align: justify;
+    }
+}
+  

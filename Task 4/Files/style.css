@@ -1,0 +1,128 @@
+h1 {
+    text-align: center;
+    color: red;
+    font-size: medium;
+    border: 1px solid black;
+}
+/* Element Selector */
+h6 {
+    color: red;
+    font-size: medium;
+    border: 1px dotted black;
+}
+
+/* Universal Selector */
+* {
+    font-family: Arial;
+}
+
+/* Class Selector */
+.highlight {
+    font-weight: bold;
+}
+
+/* ID Selector */
+#header {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+/* Grouping Selector*/
+h2, h3, h4 {
+    color: blue;
+    font-style: italic;
+}
+
+/* Attribute Selector */
+a[target="_blank"] {
+    color: blue;
+}
+a[class="external"] {
+    font-weight: bold;
+}
+
+/* Pseudo class selector*/
+a:hover {
+    color: orchid;
+}
+
+/* Pseudo element selector*/
+p::before {
+    content: " * ";
+    color: blue;
+}
+p::after {
+    content: " * ";
+    color:palevioletred;
+}
+
+/*Child Selector */
+
+/*The child selector (>) targets only immediate children of the .container element. So, in this example, only the <ul> element that is a direct child of .container will have a light blue background.
+The descendant selector ( ) targets all descendants of the .container element. So, in this example, the <p> element inside the nested <div> (which is a descendant, not a direct child) will have green text.*/
+
+.container > ul {
+    background-color: lightblue;
+}
+
+/* Descendant Selector */
+.container p {
+    color: green;
+}
+
+/* Adjacent Sibling Selector */
+.prominent + li {
+    color: red;
+}
+
+/* General Sibling Selector */
+.clear ~ li {
+    color: red;
+}
+
+/* Style the first item */
+ul li:first-child {
+    font-weight: bold;
+    color: blue;
+}
+
+/* Style the second item */
+ul li:nth-child(2) {
+    font-style: italic;
+    color: green;
+}
+
+/* Style the third item */
+ul li:nth-child(3) {
+    text-decoration: underline;
+    color: red;
+}
+
+/* Style the focused input field*/
+input:focus {
+    border: 2px solid orange;
+    outline: none;
+}
+
+/* Style enabled form elements */
+input:enabled {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+button:enabled {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Style disabled form elements */
+input:disabled {
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    color: #999;
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+}

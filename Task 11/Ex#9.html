@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekday or Weekend</title>
+</head>
+<body>
+  <script>
+    // Program to check if a day is a weekday or a weekend day
+    function checkDayType() {
+      const day = prompt("Please enter a day of the week:").toLowerCase();
+
+      if (day === "monday" || day === "tuesday" || day === "wednesday" || day === "thursday" || day === "friday") {
+        alert("It's a weekday.");
+      } 
+      else if (day === "saturday" || day === "sunday") 
+      {
+        alert("It's a weekend day.");
+      } else 
+      {
+        alert("Invalid day. Please enter a valid day of the week.");
+      }
+    }
+
+    // Call the function to check the day type
+    checkDayType();
+  </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+ /* Flex direction related to container not to items
+ row me direction left to right
+row-reverse me direction right to left 
+Column me direction top to bottom
+column-reverse me direction bottom to top */
+
+h3 {
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+}
+.container{
+    background-color: #eee;
+    padding: 10px;
+    margin: 25px auto 0;
+    width: 500px;
+    border: 3px solid #000;
+
+    display: flex;
+    flex-direction: column;
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.item1{background: pink;}
+.item2{background: skyblue;}
+.item3{background: violet;}
+
+.box {
+    background-color: #eee;
+    padding: 10px;
+    margin: 25px auto 0;
+    width: 100px;
+    border: 3px solid #000;
+
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+
+    flex-flow: column wrap;
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.one{background: pink;}
+.two{background: skyblue;}
+.three{background: violet;}
+.four{background: lightsalmon;}
+.five{background: chocolate;}
+/*  
+  Aik flex conatiner me ks trah s items ko "horizontally align" krna h esk liye justify content use kiya jata h
+  Es me 6 trah ki justifications ati hain...
+
+  1. flex-start ...         default value jo k left end s start hoti h
+  2. flex-end ...           sbhi item move krk right end pr chly jayen gy
+  3. center ...             sary item move krk center me aajayen gy
+  4. space-around ...       1st or last me equal space or baki me double ho jatii
+  5. space-between ...      1st or last wala corner me or bakii sb me space equally ajati h
+  6. space-evenly ...       1st s last s center me sb me equally space aa jati
+
+*/
+.Area {
+    background-color: #eee;
+    padding: 10px;
+    margin: 25px auto 0;
+    width: 300px;
+    border: 3px solid #000;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.I{background: pink;}
+.II{background: skyblue;}
+.III{background: violet;}
+.IV{background: lightsalmon;}
+
+/*
+  Aik flex container me flex items ko "vertically align" ks trah sy krna h .. es k liye align items ko use kiya jata h....
+  es me 6 trah ki vertical allignments ati hain
+
+  1. flex-start ...      vertical allignment sari ki sari top me hogi   
+  2. flex-end ...          alignment sari ki sari bottom me ajaye gi 
+  3. center ...            page k center me bilkul nai blky usi vertical alignment k center me 
+  4. space-around ...       
+  5. stretch ...     Default value stretch
+  6. baseline ...      text ki alignment bilkul text k neechy s hoti h 
+*/
+.AlignItems{
+    background-color: #eee;
+    padding: 10px;
+    margin: 25px auto 0;
+    width: 300px;
+    height: 200px;
+    border: 3px solid #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.A{background: pink;}
+.B{background: skyblue; height: 100px; font-size: 23px;}
+.C{background: violet; font-size: 15px;}
+/*
+   Aik flex container me flex items ko ks trah s vertically align krna h but yahan pehly s difference ye h k yahan pr multiple flex items rows hongii... esy kehty hain Align Content
+   es me 7 trah ki alignment ati hain contents ko le kr..
+
+   1. flex-start       vertically sb items top pr 
+   2. flex-end         vertically bottom pr
+   3. center           vertically center
+   4. stretch          By default value 
+   5. space-around     top or bottom s same space but center me uska double
+   6. space-between    top or bottom pr sari items or center me sari space
+   7. space-evenly     Tmam items k drmyan equal space
+
+*/
+.AlignContent {
+    background-color: #eee;
+    padding: 10px;
+    margin: 25px auto 0;
+    width: 300px;
+    height: 200px;
+    border: 3px solid #000;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+.D{background: lightgreen;}
+.E{background: lightcoral;}
+.F{background: lightslategrey;}
+.G{background: lightseagreen;}
+.H{background: lightpink;}
+/*
+   Aik flex container me kesy ksii individual item pr vertical allignment set krni h esk liye AlignSelf name ki property ko use kiya jata h.
+   6 trah ki values ati hain es me...
+
+   1. auto          usk parent container me jo alignment set hogi woi usk individual pr set hogii
+   2. flex-start    aik individual item vertically bottom pr
+   3. flex-end    aik individual item vertically top pr 
+   4. center     aik individual item vertically center me ajaye ga
+   5. stretch     aik individual item stretch hojaye ga
+   6. baseline   baseline b theek aik hi line me usi trah kam kry ga
+
+*/
+.AlignSelf {
+    background-color: #eee;
+    padding: 10px;
+    margin: 25px auto 0;
+    width: 300px;
+    height: 200px;
+    border: 3px solid #000;
+
+    display: flex;
+    align-items: center;
+
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.I{background: royalblue; align-self: stretch;}
+.J{background: hotpink;}
+.K{background: silver;}
+.L{background: khaki; align-self: flex-end;}
+/*
+  flex container me flex items ka order ks trah s arrange krna h esk liye order property ko use kiya jata hai.
+  eska use usually jb web ko responsive bnaya jaye tb use hota h
+   -2 -1 0 1 2
+*/
+.FlexboxOrder {
+    background-color: #eee;
+    padding: 10px;
+    margin: 20px auto 0;
+    width: 220px;
+    height: 150px;
+    border: 3px solid #000;
+
+    display: flex;
+    justify-content: center;
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.M{background:rgb(63, 122, 63); order: 1;}
+.N{background:tomato; order: -2;}
+.O{background: orange; order:2 ;}
+.P{background: springgreen; order: -1;}
+.Q{background: indianred;}
+/*
+  flex-grow property container pr apply nahi hoti... andrr jtni b items hoti hain yn sb pr ye property apply hoti h
+*/
+.FlexboxGrow{
+    background-color: #eee;
+    padding: 10px;
+    margin: 15px auto 0;
+    width: 200px;
+    text-align: center;
+    
+    border: 3px solid #000;
+    display: flex;
+    flex-grow: 1;
+    
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.R{background:rgb(63, 122, 63);}
+.S{background: goldenrod; flex-grow: 2; }
+.T{background: aqua; flex-grow: 3;}
+/*
+  flex container me flex-items ki max width or min width kesy set krni h us k liye flex-basis ka use kiya jata h
+  agr esko flex-grow k sath use kryn to ye min-width k liye kam krta h
+*/
+.FlexBasis{
+    background-color: #eee;
+    padding: 10px;
+    margin: 15px auto 0;
+    width: 200px;
+    text-align: center;
+    border: 3px solid #000;
+    
+    display: flex;
+    flex-basis: 100px;
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.U{background:rgb(70, 94, 70); flex-basis: 200px;}
+.V{background: rgb(211, 188, 130); }
+.W{background: rgb(36, 136, 136);}
+/*
+  responsive website k liye agr width km ho rhi h to wahan pr flex-shrink ka use kiya jata h taky sbhi items shrink hoty jayen
+*/
+.FlexShrink{
+    background-color: #eee;
+    padding: 10px;
+    margin: 15px auto 0;
+    width: 600px;
+
+    text-align: center;
+    border: 3px solid #000;
+
+    height: 100px;
+     
+    display: flex;
+
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.X{background: sandybrown; flex-shrink: 2; flex-basis: 200px;}
+.Y{background: brown }
+.Z{background: darkcyan;}

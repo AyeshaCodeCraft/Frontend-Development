@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Decision</title>
+</head>
+<body>
+  <script>
+    // Program to decide whether to go shopping or not
+    function decideShopping() {
+      const fatherPaying = prompt("Is your father paying? (Yes / No)").toLowerCase();
+      const saleAvailable = prompt("Is there a sale? (Yes / No)").toLowerCase();
+
+      if (fatherPaying === "yes" || saleAvailable === "yes") 
+      {
+        alert("You will go shopping.");
+      } 
+      else
+    {
+        alert("You will not go shopping.");
+     }
+    }
+
+    // Call the function to decide whether to go shopping
+    decideShopping();
+  </script>
+</body>
+</html>

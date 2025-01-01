@@ -1,0 +1,109 @@
+ /* .box {
+            height: 300px;
+            background-color: blue;
+            border: 2px solid black;
+        } */
+ /* @media (min-width: 500px)
+        {
+            .box{
+                background-color: aqua;
+            }
+        }
+        @media (min-width: 300px) and (max-width:500px)
+        {
+            .box{
+                background-color: aqua;
+            }
+        } */
+
+
+
+
+
+        /* 2nd practice style code */
+
+/* .container {
+    background-color: beige;
+    border: 5px solid black;
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+}
+.box {
+    height: 200px;
+    width: 200px;
+    border: 2px solid brown;
+    margin: 2px;
+    padding: 2px;
+}
+#box1 {
+    background-color: aqua;
+}
+#box2 {
+    background-color: lightblue;
+}
+#box1 {
+    background-color: gold;
+}
+#box1 {
+    background-color: chartreuse;
+}
+
+@media (min-width:650px) 
+{
+    .container{
+        flex-direction: row;
+    }    
+}
+@media (max-width:650px)
+{
+    .container{
+        flex-direction: column;
+    }
+    
+} */
+
+
+
+
+/* ---------------------3rd practice style code */
+
+.container {
+    background-color: beige;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    padding: 2px;
+    margin: 10px;
+}
+#boxLeft{
+    background-color: aquamarine;
+    border: 1px solid blue;
+    width: 47%;
+    margin: 3px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+}
+#boxRight{
+    background-color: blueviolet;
+    border: 1px solid blue;
+    width: 47%;
+    margin: 3px;
+    padding: 2px;
+}
+p{
+    border: 1px solid red;
+}
+img {
+    width: 170px;
+}
+
+@media (max-width:650px)
+{
+    .container{
+        flex-direction: column;
+    }
+    
+}

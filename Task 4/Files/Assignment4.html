@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Element Selector -->
+    <h1>Element Selector</h1>
+    <h6>This is an example of an element selector.</h6>
+
+    <!-- Universal Selector -->
+    <h1>Universal Selector</h1>
+    <p>This is a paragraph styled using the universal selector.</p>
+
+    <!-- Class Selector -->
+    <h1>Class Selector</h1>
+    <p class="highlight">This is an example of a class selector.</p>
+
+    <!-- ID Selector -->
+    <h1>ID Selector</h1>
+    <div id="header">This is an example of an ID selector.</div>
+
+    <h1>Grouping Selector</h1>
+    <!--CSS Grouping Selector-->
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+
+    <!-- HTML with attributes -->
+    <h1>Attributes Selector</h1>
+    <a href="https://www.example.com">Link 1</a>
+    <a href="https://www.example.com" target="_blank">Link 2</a>
+    <a href="https://www.example.com" class="external">Link 3</a>
+
+<!-- A pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, :hover is a pseudo-class that selects an element when the mouse is hovering over it. Similarly, :active selects an element when it is being activated by the user.
+Pseudo-classes are written after the selector and start with a colon (:). They allow you to apply styles based on user interaction or the current state of an element.    -->
+
+    <!--Pseudo class selector   states ko alter krti hain -->
+    <h1>Pseudo-classes Selectors</h1>
+    <a href="#">Hover over me</a>
+
+<!-- Pseudo-elements are used to style specific parts of an element. For example, ::before and ::after are pseudo-elements that allow you to insert content before or after an element's content.
+So, in the context of pseudo-classes, the term "pseudo" refers to the special state or condition of an element, not to a regular class defined in HTML. -->
+
+    <!--Pseudo element selector   elements k part ko target krna--> 
+    <h1>Pseudo-elements Selector</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt natus culpa, sapiente cumque ab cupiditate soluta corporis! Voluptas nulla sint distinctio officia, quasi fugiat ut!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt natus culpa, sapiente cumque ab cupiditate soluta corporis! Voluptas nulla sint distinctio officia,  quasi fugiat ut!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt natus culpa, sapiente cumque ab cupiditate soluta corporis! Voluptas nulla sint distinctio officia,  quasi fugiat ut!</p>
+
+    <!--Child Selector-->
+
+<!-- The child selector in CSS is used to select elements that are direct children of another element. It targets only the immediate children, not all descendants. The child selector is denoted by the > symbol. -->
+
+    <!--Descendant Selector-->
+
+<!-- The descendant selector in CSS is used to select elements that are descendants of another element, regardless of their direct parent-child relationship. It targets all levels of descendants, not just immediate children. The descendant selector is denoted by a space ( ). -->
+    <h1>Child and descendant selectors</h1>
+    <div class="container">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+        <div>
+            <p>Paragraph 1</p>
+        </div>
+    </div>
+
+    <!--Adjacent Sibling Selector-->
+
+<!-- The adjacent sibling selector in CSS selects an element that is immediately preceded by a specified element. It targets elements that share the same parent and are placed immediately after each other in the HTML structure. The adjacent sibling selector is denoted by the plus sign (+). -->
+    <h1>Adjacent Sibling Selector</h1>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li class="prominent">Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <!--General Sibling Selector-->
+
+<!-- The general sibling selector in CSS is similar to the adjacent sibling selector, but it selects all sibling elements that come after a specified element, not just the immediate one. It targets elements that share the same parent and appear after the specified element in the HTML structure. The general sibling selector is denoted by the tilde symbol (~).-->
+    <h1>General Sibling Selector</h1>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li class="clear">Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <!--First child selector, second child and nth child selector-->
+    <h1>First Child upto nth Child selector</h1>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li>
+    </ul>
+
+    <!--Focus Selector-->
+    <h1>Focus Selector</h1>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+    </form>
+
+    <!--Enabled and Disabled Selector-->
+    <h1>Enabled and Diabled Selector</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" disabled>
+        <button type="submit" disabled>Submit</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>

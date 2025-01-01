@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Light Simulator</title>
+</head>
+<body>
+  <script>
+    // Program to simulate a traffic light
+    function trafficLightSimulator() {
+      const lightColor = prompt("Please enter the color of the traffic light (Red, Yellow, Green):").toLowerCase();
+
+      if (lightColor === "red") 
+      {
+        alert("Stop! The light is red.");
+      }
+       else if (lightColor === "yellow") 
+       {
+        alert("Caution! The light is yellow.");
+      }
+       else if (lightColor === "green")
+       {
+        alert("Go! The light is green.");
+      } 
+      else
+    {
+        alert("Invalid color. Please enter either Red, Yellow, or Green.");
+      }
+    }
+
+    // Call the function to simulate the traffic light
+    trafficLightSimulator();
+  </script>
+</body>
+</html>

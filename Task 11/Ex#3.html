@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Eligibility</title>
+</head>
+<body>
+  <script>
+    // Program to check eligibility for discount
+    function checkDiscountEligibility() {
+      const hasMembership = prompt("Do you have a membership? (Yes / No)").toLowerCase();
+      const isStudent = prompt("Are you a student? (Yes / No)").toLowerCase();
+
+      if (hasMembership === "yes" || isStudent === "yes") {
+        alert("You qualify for a discount.");
+      } else {
+        alert("Sorry, no discount for you.");
+      }
+    }
+
+    // Call the function to check discount eligibility
+    checkDiscountEligibility();
+  </script>
+</body>
+</html>

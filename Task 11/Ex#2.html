@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tea or Coffee?</title>
+</head>
+<body>
+  <script>
+    function serveDrink() {
+      const drinkChoice = prompt("Do you prefer tea or coffee?").toLowerCase();
+
+      if (drinkChoice === "tea") {
+        alert("Here is your tea");
+      } else if (drinkChoice === "coffee") {
+        alert("Here is your coffee");
+      } else {
+        alert("Something went wrong");
+      }
+    }
+
+    serveDrink(); // Call the function to start serving the drink
+  </script>
+</body>
+</html>

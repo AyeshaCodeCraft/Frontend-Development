@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driving Eligibility</title>
+</head>
+<body>
+  <script>
+    // Program to check driving eligibility based on age and car ownership
+    function checkDrivingEligibility() {
+      const age = parseInt(prompt("Please enter your age:"));
+      const hasCar = prompt("Do you own a car? (Yes / No)").toLowerCase();
+
+      if (age > 17 && hasCar === "yes") {
+        alert("You can drive and you own a car.");
+      } else {
+        alert("You cannot drive a car.");
+      }
+    }
+
+    // Call the function to check driving eligibility
+    checkDrivingEligibility();
+  </script>
+</body>
+</html>

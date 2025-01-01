@@ -1,0 +1,220 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+/*resets*/
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color : #2294ed;
+    --accent-color-dark : #1d69a3;
+    --padding-inline-section : 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+    /*utility classes*/
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+.flex
+{
+    display: flex;
+    align-items: center;
+}
+
+.hover-link{
+    columns: var(--primary-text-color);
+    transition: 0.2 ease-out;
+}
+
+.hover-link:hover{
+    color: var(--accent-color);
+
+}
+     /*Primary Button*/
+
+ .primary-button {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+} 
+    /*Secondary Button*/
+.secondary-button {
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+    /*Top banner*/
+.top-banner {
+    background-color: #4fb3d4;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
+}
+
+.logo-image {
+    width: 400px; /* Adjust the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.banner-text{
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+     /* nav bar*/
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.nav-links{
+    flex-basis: 730px;
+}
+.nav-links ul {
+    gap: 40px;
+    justify-content: end;
+
+}
+/*Header Section*/
+header{
+    padding: 10px var(--padding-inline-section);
+}
+.header-section {
+    justify-content: center;
+    gap: 50px;
+}
+.header-left {
+    max-width: 40vw;
+}
+.header-left h1 {
+    margin-top: 20px;
+}
+.get-started-btn {
+    margin-top: 20px;
+}
+.header-right img {
+    width: 500px;
+}
+
+/*Companies Section*/
+.companies-header {
+    text-align: center;
+    margin-block: 30px;
+    color: var(--primary-text-color);
+}
+.logos {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    height: 100px;
+}
+/*features sections*/
+
+.features-header {
+    text-align: center;
+}
+.features-section {
+    padding: 50px var(--padding-inline-section) 0;
+}
+.features-heading-text {
+    margin-bottom: 20px;
+}
+
+/*Big Feature Section*/
+
+.big-feature-section {
+    padding: 30px var(--padding-inline-section) 0;
+}
+
+.big-feature-container {
+    gap: 30px;
+}
+
+.feature-img img {
+    width: 80%;
+    padding: 10px;
+    
+}
+.features-description {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*cta section*/
+
+.cta-section-container {
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-section {
+    background-color: #183b56;
+    padding: 12px var(--padding-inline-section);
+}
+.cta-section-container p {
+    color: white;
+    margin-top: 20px;
+}
+
+
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+  <style>
+    .nav-bar {
+      background-color: #8bc9d8;
+      padding: 10px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      background-color: #daa7a7;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="initialInput" placeholder="Enter number of items">
+  <button id="initialButton">Click me!</button>
+
+  <div id="menuContainer"></div>
+
+  <script>
+
+    //1...........................Initial Button Click Event Listener
+
+    document.getElementById("initialButton").addEventListener("click", function () {
+      //       document.getElementById("initialInput"):
+      //  This line retrieves an HTML element with the id "initialInput" from the document. This element is likely a 
+      //  text input field.
+      // .value: This property retrieves the current value of the input field, which is a string.
+      // parseInt(...): This function converts the string value to an integer. If the conversion is successful,
+      //  it returns the integer value. If the conversion fails (e.g., if the input is not a valid number),
+      //   it returns NaN (Not a Number).
+
+      let numberOfItems = parseInt(document.getElementById("initialInput").value);
+      console.log(numberOfItems);
+
+      //  !isNaN(numberOfItems): This expression checks if the value of numberOfItems is not NaN. isNaN returns true
+      //  if the value is NaN, and false otherwise. The ! operator negates the result, so this expression is true if 
+      //  numberOfItems is a valid number.
+      // numberOfItems > 0: This expression checks if the value of numberOfItems is greater than 0.
+      // The if statement checks both conditions. If both conditions are true, the code inside the if block is 
+      // executed.
+
+      if (!isNaN(numberOfItems) && numberOfItems > 0) {
+
+        // This line calls a function named createMenuInputs and passes numberOfItems as an argument. The 
+        // purpose of this function is not shown in this code snippet, but it likely creates a set of input fields or 
+        // menu items based on the value of numberOfItems.
+
+        createMenuInputs(numberOfItems);
+      }
+    });
+
+    //2............................Function for create the menu inputs
+
+    //This line defines a function named createMenuInputs that takes a single argument count.
+    function createMenuInputs(count) {
+      //This line retrieves an HTML element with the id "menuContainer" from the document. This element is
+      // likely a container for the input fields and the button
+      let menuContainer = document.getElementById('menuContainer');
+
+      //This line sets the innerHTML property of the menuContainer element to an empty string, effectively 
+      //removing all child elements from the container.
+      menuContainer.innerHTML = '';
+
+      for (let i = 0; i < count; i++) {
+        //This line creates a new input element using the createElement method.
+        let input = document.createElement('input');
+
+        //This line sets the type attribute of the input element to "text", which creates a text input field.
+        input.type = 'text';
+
+        //This line sets the placeholder attribute of the input element to "Menu item 1", "Menu item 2", etc.,
+        input.placeholder = `Menu item ${i + 1}`;
+
+        //This line appends the input element to the menuContainer element.
+        menuContainer.appendChild(input);
+      }
+
+      //1st line creates a new button element using the createElement method.
+      //2nd line sets the text content of the button element to "Click menu".
+      //3rd line adds an event listener to the button element. The event listener listens for a "click" event,
+      // which is triggered when the user clicks the button. When the event is triggered, the generateNavBar 
+      // function is executed.
+      //4th line appends the button element to the menuContainer element.By appending the button to the container,
+      // you ensure that the button appears in the DOM as a child of the menuContainer, following any other child 
+      //elements (like the input fields created earlier). This method is commonly used to dynamically add elements
+      // to the DOM.
+
+      let button = document.createElement('button');
+      button.textContent = 'Click menu';
+      button.addEventListener('click', generateNavBar);
+      menuContainer.appendChild(button);
+    }
+
+    //3............................Generate Navigation Bar
+    function generateNavBar() {
+      //document.querySelectorAll('#menuContainer input') selects all <input> elements that are inside the element with the ID menuContainer.
+      // document.querySelectorAll returns a NodeList, which is a collection of nodes (in this case, input elements).
+      // The selected NodeList is assigned to the variable inputs.      
+      let inputs = document.querySelectorAll('#menuContainer input');
+
+      //Array.from(inputs) converts the NodeList inputs into a regular JavaScript array. This conversion is necessary
+      // because NodeLists do not have the full array methods available to regular arrays.
+
+      // .map(input => input.value) is an array method that creates a new array populated with the results of calling a
+      // provided function on every element in the calling array.
+
+      // input => input.value is an arrow function that takes each input element from the array and returns its value (input.value).
+      // The resulting array, which contains the values of all the input fields, is assigned to the variable navItems.
+      let navItems = Array.from(inputs).map(input => input.value);
+
+      createNavBar(navItems);
+    }
+
+
+    //4.................Create navigation bar
+
+    function createNavBar(items) {
+      // document.querySelector('.nav-bar') selects the first element in the document with the class name nav-bar.
+      //It checks if there's already a navigation bar (existingNavBar).
+      // The if statement checks if existingNavBar is truthy (meaning an element with class nav-bar exists).
+      // existingNavBar.remove() removes the existing navigation bar from the document if it exists, ensuring that 
+      //only one navigation bar exists at a time.
+
+      let existingNavBar = document.querySelector('.nav-bar');
+      if (existingNavBar) {
+        existingNavBar.remove();
+      }
+      //document.createElement('div') creates a new div element and assigns it to the variable navBar.
+      //navBar.className = 'nav-bar' sets the class name of the newly created div element to nav-bar. This ensures 
+      //that the created navigation bar has the appropriate styling
+
+      let navBar = document.createElement('div');
+      navBar.className = 'nav-bar';
+
+      //items.forEach(item => { ... }) iterates over each element in the items array.
+      // Inside the loop:
+      // document.createElement('a') creates a new a (anchor) element and assigns it to the variable link.
+      // link.href = '#' sets the href attribute of the anchor element to #, making it a placeholder link.
+      // link.textContent = item sets the text content of the anchor element to the current item from the items array.
+      // navBar.appendChild(link) appends the anchor element (link) as a child of the navBar div. 
+      //Each item in the items array corresponds to a link in the navigation bar.
+
+      items.forEach(item => {
+        let link = document.createElement('a');
+        link.href = '#';
+        link.textContent = item;
+        navBar.appendChild(link);
+      });
+
+      //Finally, document.body.appendChild(navBar) appends the entire navBar (which now contains all the anchor
+      // elements) to the body of the HTML document. This completes the process of creating and displaying the 
+      //navigation bar.
+
+      document.body.appendChild(navBar);
+    }
+
+  </script>
+</body>
+
+</html>
+
+<!-- The createNavBar function effectively creates a navigation bar based on an array of items (items). It first
+ removes any existing navigation bar to ensure there's only one instance visible at a time. Then, it 
+ dynamically generates anchor (a) elements for each item in the array, appends them to a newly created div 
+ (navBar), and attaches this navBar to the document's body for display. This function is modular and reusable
+  for dynamically generating navigation bars based on different sets of items provided to it. -->

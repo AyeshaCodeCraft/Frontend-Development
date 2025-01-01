@@ -1,0 +1,172 @@
+/*console.log bhi window object ka part hota ... window aik global object h or script.js ko throughout pta h 
+k ye sb k sb window object sy belong krty hain or window k andr kafi methods or functions hain jnhy daily 
+routine me use kiya jata h
+
+alert("Hello");
+window.alert("Hello");
+
+these are same and will perform the same functionality and we not use this window before each single attribute 
+or property. 
+In short, The window object represents an open window in a browser. It is browser's object (not JS) and it is 
+automatically created by the browser.
+It is a global object with lots of properties and methods.
+
+
+--------------------------DOM ---------- >>>>  Document Object Model
+
+When a web page is loaded, the browser creates a Document Object Model of the page
+
+Jtna bhi HTML hm JS k sath attach krk likhty hain wo sara ka sara code hm JS k andr access kr skty hain
+But HOW...?
+Automatically HTML ka sara code sbhi elements tags etc wo JS me aa kr object ki form me convert ho jaty hain
+or usi object ko special name Document ka diya jata hai or ye Document available hota h hmri window object k 
+andr.. 
+or window object hmesha hr page pr present hoti hai ... esi window k andr aik or object Document k name sy aa
+jati hai or fir esi Document k through hm sara HTML access kr skty hain
+
+window;                  contains lot of information containing Document object name too
+window.document;         by this we'll access the Document in short Our whole HTML code
+
+console.log              used for print .. object ko as an element print krwata h
+
+But if I want to checkout the document object properties 
+console.dir(window.document);
+Jo hmri special objects hoti hain Like Document ye uski properties or methods print krwata h
+
+console.dir(document.body)     It will fetch all the body elements
+console.log(document.body)     It will fetch body tags and elements present in the HTML.
+
+
+
+--------------------------------DOM Manipulation ------->>    DOM k andr changes krna 
+
+Before doing any change we must clear either we want change in p tag h tag button tag or any else
+So in order to change we must have to access that elements i.e., necessary to select that element
+
+1. Selecting with id
+document.getElementById("Heading") It'll always return the value so we have to store it in a variable
+
+let heading = document.getElementById("heading")
+console.log(heading);
+console.dir(heading);
+
+2. Selecting with class   
+It returns the HTML collection just like an array
+Multiple values ko aik hi jesi property assign krni ha then esy class me enclose kiya jata h
+
+let headings= document.getElementsByClassName("heading")
+console.log(heading);
+console.dir(heading);
+
+3. Selecting with tag name
+If we want to access the only one tag like either it is p or h1 or anything else
+
+lets paras= document.getElementsByTagName("p")
+console.log(paras);
+console.dir(paras);
+
+4. Query Selector 
+Returns NodeList
+Always prefer to use query selector as it'll decide either which tag it is demanding and of which type
+
+let firstEl = document.querySelector(".p");    firstElement
+console.dir(firstEl)
+
+let allEl = document.querySelectorAll(".p");   allElements
+console.dir(allEl)
+But in case of id we'll use #p in case of query
+
+
+
+----------------  Now some DOM Properties--------->>
+
+Agr elements ki properties ko view krna h ya value me change lana we'll use following Properties
+In short values get b ho skti set ho skti mean change or update b ho skti
+
+1. tagName ......    kisi b element ka tag name print krwany k liye esy use kiya jata h
+
+2. innerText......   returns the text content of the element and all its children 
+    lets' understand the term children for example in body tag we have div and that div contains img tag,
+    h1 tag,p and another div too
+In DOM, there are three types of nodes ... text node , comment node and element node
+documenet.querySelector("div").children;   
+
+if the div contain p, h1 and another div it will show list.Basically it is used in navigation
+let div = documenet.querySelector("div");
+console.dir(div);
+div.innerText;
+   
+3. innerHTML ............ specific element ka sara ka sara HTML code print ho jaye ga
+returns the plain text or HTML contents in the element
+
+4. textContent .............. returns textual content even for hidden elements
+Ye text ko set krny k liye modify krny k liye use kiya jata h agr kisi element ko new value assign krni to
+div.innerText = "zyc";
+for instance agr kisi element ki visibility none h to us me likha text es property ko use krk dekha ja skta h
+
+
+-------------------   DOM Attributes  -----------------
+paragraph ya div ko agr koi id mili ya image k tag ko link mila en sbhi ko attribute bolty
+In case kisi b div k attribute ko agr access kr k value get ya set krni to es property ka use kiya jata h
+
+getAttribute( attr ) //to get the attribute value
+
+setAttribute( attr, value ) //to set the attribute value
+
+let div= document.querySelector("div);
+console.log(div);
+let id = div.getAttribute("id");
+console.log(div);
+
+In case if we want to change the attribute of the tag or element
+let para = document.querySelector("p);
+console.log(para.setAttribute("class", "new class"));
+
+Another special attribute is the 'style' in case if we want to change the style of any node we can write
+node.style
+
+let div = document.querySelector("div");
+div.style.backgroundColor= "green";
+div.style.fontSize = 26px;
+div.innerText= "Hey";
+
+------------ In DOM Manipulation there's insert elements ---------
+
+In order to add any element there are 2 steps first create that thing and then add
+let el = document.createElement("div");        //create
+
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click Me!";
+console.log(newBtn);
+
+let div = document.querySelector("div");
+div.after(newBtn);
+
+node.append( el )             //adds at the end of node (inside)
+
+node.prepend( el )          //adds at the start of node (inside)
+
+node.before( el )         //adds before the node (outside)
+
+node.after( el )       //adds after the node (outside)
+
+<div id= "box"> this is a div 
+<ul>List
+  <li>Mango</li>
+  <li>Litchi</li>
+  <li>Apple</li>
+</ul>
+</div>
+
+let newHeading = document.createElement("h1");
+newHeading.innerHTML = <i>Hey there!</i>
+
+document.querySelector("body").prepend(newHeading);
+
+And if we want to REMOVE the node then we can write like
+
+node.remove( ) //removes the node
+
+let para = document.querySelector("p");
+para.remove();
+*/

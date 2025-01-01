@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day of the Week</title>
+</head>
+<body>
+  <script>
+    // Program to display the day name based on the user's input
+    function displayDayName() {
+      const dayNumber = parseInt(prompt("Please enter a number representing a day of the week (1 for Monday, 2 for Tuesday, etc.):"));
+
+      if (dayNumber === 1) {
+        alert("Monday");
+      } else if (dayNumber === 2) {
+        alert("Tuesday");
+      } else if (dayNumber === 3) {
+        alert("Wednesday");
+      } else if (dayNumber === 4) {
+        alert("Thursday");
+      } else if (dayNumber === 5) {
+        alert("Friday");
+      } else if (dayNumber === 6) {
+        alert("Saturday");
+      } else if (dayNumber === 7) {
+        alert("Sunday");
+      } else {
+        alert("Invalid day number. Please enter a number between 1 and 7.");
+      }
+    }
+
+    // Call the function to display the day name
+    displayDayName();
+  </script>
+</body>
+</html>

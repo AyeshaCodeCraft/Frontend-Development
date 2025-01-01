@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eligibility Check</title>
+</head>
+<body>
+  <script>
+    // Program to check eligibility based on age and valid ID
+    function checkEligibility() {
+      const age = parseInt(prompt("Please enter your age:"));
+      const hasValidID = prompt("Do you have a valid ID? (Yes / No)").toLowerCase();
+
+      if (age > 18 && hasValidID === "yes") {
+        alert("You are eligible.");
+      } else {
+        alert("Sorry, you are not eligible.");
+      }
+    }
+
+    // Call the function to check eligibility
+    checkEligibility();
+  </script>
+</body>
+</html>
